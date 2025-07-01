@@ -6,10 +6,9 @@ Install [stow](https://www.gnu.org/software/stow/) to manage symlinks
 brew install stow
 ```
 
-Symlink to the home directory
+Symlink all files under `~/.dotfiles/macos/` to the home directory
 
 ```bash
 cd ~/.dotfiles
-stow .
-
+stow macos
 ```
