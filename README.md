@@ -6,9 +6,12 @@ Install [stow](https://www.gnu.org/software/stow/) to manage symlinks
 brew install stow
 ```
 
-Symlink all files under `~/.dotfiles/macos/` to the home directory
+Symlink files to the home directory
 
 ```bash
 cd ~/.dotfiles
-stow macos
+stow -d ./macos -t $HOME zsh
+stow -d ./macos -t $HOME wezterm
+stow -d ./macos -t $HOME nvim
+stow -d ./macos -t $HOME tmux
 ```
