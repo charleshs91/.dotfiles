@@ -44,7 +44,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 # zoxide (better cd)
-eval "$(zoxide init zsh --cmd cd)"
+eval "$(zoxide init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -54,5 +54,6 @@ source $HOME/.config/zsh/aliases.sh
 # Android SDK
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-export JAVA_HOME="$HOME/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export JAVA_HOME="$HOME/Applications/Android\ Studio.app/Contents/jbr/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
+
