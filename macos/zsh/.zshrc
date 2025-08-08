@@ -44,7 +44,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 # zoxide (better cd)
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
