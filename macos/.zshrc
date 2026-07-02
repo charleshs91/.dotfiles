@@ -74,7 +74,7 @@ eval "$($HOME/.local/bin/mise activate zsh)"
 # Use 'bat' as pager if it's installed.
 if [[ -x "$(command -v bat)" ]]; then
   # export PAGER="bat"
-  export MANPAGER="bat"
+  # export MANPAGER="bat"
 fi
 
 # zoxide (better cd)
@@ -111,13 +111,6 @@ ANDROID_SDK_PATHS="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tool
 case :$PATH: in
 *":$ANDROID_SDK_PATHS:"*) ;;
 *) export PATH="$PATH:$ANDROID_SDK_PATHS" ;;
-esac
-
-# pnpm
-export PNPM_HOME="/Users/charleshs/Library/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
 # git-fuzzy

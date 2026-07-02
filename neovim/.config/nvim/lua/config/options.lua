@@ -7,3 +7,11 @@ vim.g.snacks_animate = false
 
 -- Enable relative line numbers
 vim.opt.relativenumber = true
+
+-- Disable swap file
+vim.opt.swapfile = false
+
+-- Line wrapping
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true

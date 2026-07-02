@@ -8,7 +8,10 @@ return {
         tailwindcss = {},
         bashls = {},
         sourcekit = {
-          cmd = { "xcrun", "sourcekit-lsp" },
+          cmd = {
+            "xcrun",
+            "sourcekit-lsp",
+          },
         },
         lua_ls = {
           settings = {
