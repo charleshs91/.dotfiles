@@ -1,6 +1,15 @@
 -- https://github.com/folke/snacks.nvim
 return {
   "folke/snacks.nvim",
+  keys = {
+    {
+      "<leader>cs",
+      function()
+        Snacks.picker.lsp_symbols()
+      end,
+      desc = "LSP Symbols (Snacks)",
+    },
+  },
   ---@type snacks.Config
   opts = {
     picker = {
@@ -8,7 +17,7 @@ return {
         cycle = false,
       },
       hidden = true,
-      ignored = true,
+      ignored = false,
       sources = {
         explorer = {
           auto_close = true,
@@ -22,6 +31,12 @@ return {
         files = {
           hidden = true,
           ignored = true,
+        },
+        lsp_symbols = {
+          filter = require("config.symbol-kinds").ts_filetypes(),
+        },
+        lsp_workspace_symbols = {
+          filter = require("config.symbol-kinds").ts_filetypes(),
         },
       },
     },

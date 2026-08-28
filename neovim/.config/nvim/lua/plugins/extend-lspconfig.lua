@@ -5,7 +5,34 @@ return {
     ---@type vim.lsp.Config
     opts = {
       servers = {
-        tailwindcss = {},
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              classAttributes = {
+                "class",
+                "className",
+                "class:list",
+                "ngClass",
+              },
+              classFunctions = {
+                "clsx",
+                "cn",
+                "cva",
+              },
+              experimental = {
+                classRegex = {
+                  -- Matches: cn('...') or cn("...") or cn(`...`)
+                  { "cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- Matches: clsx('...') or clsx("...") or clsx(`...`)
+                  { "clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- Matches multi-line or nested arrays/objects inside cn() or clsx()
+                  { "cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                },
+              },
+            },
+          },
+        },
         bashls = {},
         sourcekit = {
           cmd = {
